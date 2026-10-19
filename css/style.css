@@ -1,0 +1,362 @@
+/* ============================================ */
+/* VARIABLES CSS : Couleurs personnalisables */
+/* ============================================ */
+:root {
+    /* Couleur principale (bleu foncé) */
+    --color-primary: #2c3e50;
+    
+    /* Couleur d'accent (orange bricolage) */
+    --color-accent: #ff6b35;
+    
+    /* Couleurs de fond */
+    --color-background: #f8f9fa;
+    --color-white: #ffffff;
+    
+    /* Couleurs de texte */
+    --color-text: #333333;
+    --color-text-light: #6c757d;
+    
+    /* Ombres */
+    --shadow-small: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.15);
+    
+    /* Bordures arrondies */
+    --border-radius: 12px;
+    
+    /* Espacements */
+    --spacing-small: 1rem;
+    --spacing-medium: 2rem;
+    --spacing-large: 4rem;
+}
+
+/* ============================================ */
+/* RÉINITIALISATION ET STYLES DE BASE */
+/* ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-small);
+}
+
+/* ============================================ */
+/* EN-TÊTE : Logo et navigation */
+/* ============================================ */
+header {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-small);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-emoji {
+    font-size: 2.5rem;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1.2;
+}
+
+.logo-subtitle {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--color-text-light);
+}
+
+/* Menu de navigation */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+    color: var(--color-accent);
+}
+
+/* Lien actif (page courante) */
+.nav-link.active {
+    color: var(--color-accent);
+    border-bottom: 3px solid var(--color-accent);
+}
+
+/* ============================================ */
+/* SECTION HERO : Bannière d'introduction */
+/* ============================================ */
+.hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #34495e 100%);
+    color: var(--color-white);
+    padding: var(--spacing-large) 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-small);
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: var(--spacing-medium);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    width: 100%;
+}
+
+.btn-secondary:hover {
+    background-color: #1a252f;
+    transform: translateY(-2px);
+}
+
+/* ============================================ */
+/* SECTION CATÉGORIES par type de travaux */
+/* ============================================ */
+.categories {
+    padding: var(--spacing-large) 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: var(--spacing-medium);
+    color: var(--color-primary);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.category-card {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-small);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.category-emoji {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.category-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.category-description {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}
+
+/* ============================================ */
+/* SECTION PRODUITS mis en avant */
+/* ============================================ */
+.products {
+    padding: var(--spacing-large) 0;
+    background-color: var(--color-white);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: var(--color-background);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-small);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Badge type de travaux */
+.product-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+/* ============================================ */
+/* PIED DE PAGE */
+/* ============================================ */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: var(--spacing-large);
+}
+
+.footer-text {
+    font-size: 0.95rem;
+}
+
+/* ============================================ */
+/* RESPONSIVE : Adaptation mobile */
+/* ============================================ */
+@media (max-width: 768px) {
+    /* Header responsive */
+    header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    /* Hero responsive */
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    /* Grilles responsive */
+    .categories-grid,
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Réduction des espacements */
+    :root {
+        --spacing-large: 2.5rem;
+        --spacing-medium: 1.5rem;
+    }
+}
