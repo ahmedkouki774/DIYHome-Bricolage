@@ -1,0 +1,39 @@
+═══════════════════════════════════════════════════════════════
+COMMANDES POUR POUSSER LE PROJET SUR GITHUB
+═══════════════════════════════════════════════════════════════
+
+Ouvrez PowerShell dans : C:\Users\LENOVO\Desktop\Bricolage
+
+Puis copiez-collez ces commandes UNE PAR UNE :
+
+─────────────────────────────────────────────────────────────
+
+# Étape 1 : Commiter le fichier .gitignore
+git commit -m "chore: Ajout du fichier .gitignore"
+
+─────────────────────────────────────────────────────────────
+
+# Étape 2 : Pousser tous les commits vers GitHub
+git push -u origin main
+
+─────────────────────────────────────────────────────────────
+
+IMPORTANT : Si vous voyez une demande d'authentification :
+
+Username: ahmedkouki774
+Password: [Collez votre Personal Access Token GitHub]
+
+Pour créer un token :
+1. Allez sur : https://github.com/settings/tokens
+2. Cliquez "Generate new token (classic)"
+3. Cochez "repo"
+4. Générez et copiez le token
+
+─────────────────────────────────────────────────────────────
+
+Après le push, vérifiez sur :
+https://github.com/ahmedkouki774/DIYHome-Bricolage
+
+Vous devriez voir tous vos fichiers ! ✅
+
+═══════════════════════════════════════════════════════════════
